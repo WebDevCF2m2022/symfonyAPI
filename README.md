@@ -76,3 +76,14 @@ class NotrePremierController extends AbstractController
     }
 }
 ```
+
+On peut vérifier la route : 
+
+```bash
+php bin/console debug:router
+```
+
+Si on la commente, on a plus de route
+
+on peut la créer dans `config\routes.yaml` :
+

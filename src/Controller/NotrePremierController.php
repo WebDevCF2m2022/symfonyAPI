@@ -1,19 +1,17 @@
 <?php
-
+# namespace
 namespace App\Controller;
 
+# Ce qu'on a besoin
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Response;
+
 
 class NotrePremierController extends AbstractController
 {
-    #[Route('/', name: 'homepage')]
-    public function index(): JsonResponse
+    # routes voir routes.yaml
+    public function index(): Response
     {
-        return $this->json([
-            'message' => 'Welcome to your new controller!',
-            'path' => 'src/Controller/NotrePremierController.php',
-        ]);
+        return new Response("<h1>coucou les amis</h1>");
     }
 }
