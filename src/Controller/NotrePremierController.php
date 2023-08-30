@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class NotrePremierController extends AbstractController
 {
-    #[Route('/notre/premier', name: 'app_notre_premier')]
+    #[Route('/', name: 'homepage')]
     public function index(): JsonResponse
     {
         return $this->json([

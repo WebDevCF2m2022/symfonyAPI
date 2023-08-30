@@ -52,3 +52,27 @@ Choose a name for your controller class (e.g. DeliciousGnomeController):
 
  Next: Open your new controller class and add some pages!
 ```
+
+On obtient ce code qui crée un `json`, on change la `route` vers la racine et on la nomme `homepage`:
+
+```php
+<?php
+
+namespace App\Controller;
+
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\Routing\Annotation\Route;
+
+class NotrePremierController extends AbstractController
+{
+    #[Route('/', name: 'homepage')]
+    public function index(): JsonResponse
+    {
+        return $this->json([
+            'message' => 'Welcome to your new controller!',
+            'path' => 'src/Controller/NotrePremierController.php',
+        ]);
+    }
+}
+```
