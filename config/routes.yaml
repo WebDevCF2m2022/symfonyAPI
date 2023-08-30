@@ -8,3 +8,12 @@ controllers:
 homepage:
     path:      /
     controller:   App\Controller\NotrePremierController::index
+
+page:
+    path: /page/{id}
+    controller:   App\Controller\NotrePremierController::page
+    methods:    GET
+    requirements:
+        id: '\d+'
+    defaults:
+        id: 1
